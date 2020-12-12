@@ -1,11 +1,13 @@
  <?php
 // print_r($_SESSION);
 session_start();
+
+
 $error = "";
 if(!isset($_SESSION["admin_db"]) || $_SESSION["admin_db"]== ""){
     header("location:login.php");
-    echo "admin_db Not set ";
-    echo "<br>admin_db is: ".$_SESSION["admin_db"];
+    // echo "admin_db Not set ";
+    // echo "<br>admin_db is: ".$_SESSION["admin_db"];
 }
 
 if (isset($_REQUEST["back"])) {
@@ -60,17 +62,17 @@ else{
         
     }
     else{
-         echo  $conn->error; 
-        echo "NOt able --to insert";
+        //  echo  $conn->error; 
+        // echo "NOt able --to insert";
     }
     }
    else{
-       echo "not able to insert";
+    //    echo "not able to insert";
    }
 
 
 }
-}
+} 
 else{
     // echo "not ready to insert";
 }
@@ -82,6 +84,7 @@ else{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Insert Question</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <style>
@@ -132,7 +135,7 @@ else{
       
       /* background-color: rgb(34, 34, 34); */
       background-image: url(quiz_image.jpg);
-      background-repeat: no-repeat;
+      /* background-repeat: no-repeat; */
       background-size: cover;
       margin:0px; 
     }
@@ -273,10 +276,7 @@ text-align:right;
   button{
       width:92%; 
   }
-  p{
-      /* text-align:center;  */
-      
-  }
+
   body{
       height:120vh;
   }

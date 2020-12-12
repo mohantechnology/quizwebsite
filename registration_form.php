@@ -124,7 +124,7 @@ $display_form = "true";
 
 
 
-
+ 
 
 ?>
 
@@ -136,6 +136,7 @@ $display_form = "true";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration Form</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <style>
@@ -145,7 +146,7 @@ $display_form = "true";
       
       /* background-color: rgb(34, 34, 34); */
       background-image: url(quiz_image.jpg);
-      background-repeat: no-repeat;
+      /* background-repeat: no-repeat; */
       background-size: cover;
       margin:0px; 
     }
@@ -286,10 +287,7 @@ text-align:right;
   button{
       width:80%; 
   }
-  p{
-      /* text-align:center;  */
-      
-  }
+
   body{
       height:120vh;
   }

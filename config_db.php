@@ -6,4 +6,5 @@ $conn_quiz_table = ' new mysqli("localhost", "root", "","quiz_table") ;';
 
 
 
+
 ?>

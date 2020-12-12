@@ -9,7 +9,7 @@ if (isset($_REQUEST["login"])) {
     include "admin_detail.php"; 
      
     if(strcmp($mobile_no , $admin_mobile_no)=== 0 && strcmp( $password, $admin_pass)=== 0 ){
-       echo"admini login";
+    //    echo"admini login";
        $_SESSION["admin_db"] ="TTTTT";
         //  echo "qoing to admin db ";
         header("location:admin.php");
@@ -52,7 +52,7 @@ if (isset($_REQUEST["login"])) {
             $error = "User Not Registered";
         }
     } else {
-        echo "Not able to connect ";
+        // echo "Not able to connect ";
     }
 }
 
@@ -65,6 +65,7 @@ if (isset($_REQUEST["login"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <style>
@@ -76,7 +77,7 @@ if (isset($_REQUEST["login"])) {
       
         /* background-color: rgb(34, 34, 34); */
         background-image: url(quiz_image.jpg);
-        background-repeat: no-repeat;
+        /* background-repeat: no-repeat; */
         background-size: cover;
         /* background-size: 100%; */
     

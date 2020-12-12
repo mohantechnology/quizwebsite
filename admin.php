@@ -95,6 +95,7 @@ else if(isset($_REQUEST["delete"])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administator</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <style>
@@ -192,13 +193,11 @@ else if(isset($_REQUEST["delete"])) {
             padding:20px;
             margin:10px auto;  
         }
-        #back_button{
-            
-        }
+     
         
 
         
-
+ 
     }
 
     @media screen and (max-width :900px){

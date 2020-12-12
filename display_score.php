@@ -21,6 +21,7 @@ if(!isset($_SESSION["user_db"])  || $_SESSION["user_db"] ==""){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Result</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <style>
@@ -118,10 +119,7 @@ if(!isset($_SESSION["user_db"])  || $_SESSION["user_db"] ==""){
             padding:20px;
             margin:10px auto;  
         }
-        #back_button{
-            
-        }
-        
+      
 
         
 
@@ -242,9 +240,9 @@ if(!isset($_SESSION["user_db"])  || $_SESSION["user_db"] ==""){
         $result2 = $conn2->query($sql);
         // echo "<r><br><br>";
         if($result2=="" || $result2->num_rows == 0 ){
-            echo "<br> not able to fetch the question ";
-            // die("eroor fetching data ");
-            echo $conn2->connect_error;
+            // echo "<br> not able to fetch the question ";
+            die("eroor fetching data ");
+            // echo $conn2->connect_error;
         }  
         $result2 = $result2->fetch_assoc();     
         if($row["answer"] =="" ){

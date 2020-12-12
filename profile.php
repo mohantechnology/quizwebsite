@@ -48,14 +48,14 @@ if (isset($_SESSION["user_db"]) != 1  || $_SESSION["user_db"] === "") {
         // echo "user name =->>", $name;
         $conn->close();
     } else {
-        echo "not able to take out name ";
+        // echo "not able to take out name ";
     }
     // echo "user name =->>",$name;
 
 }
 
 
-
+ 
 ?>
 
 
@@ -67,6 +67,7 @@ if (isset($_SESSION["user_db"]) != 1  || $_SESSION["user_db"] === "") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 </head>
 
 <style>
@@ -291,7 +292,7 @@ if (isset($_SESSION["user_db"]) != 1  || $_SESSION["user_db"] === "") {
 
     }
     else{
-        echo "not able to coneect";
+        // echo "not able to coneect";
     }
     
      echo '</form>';
