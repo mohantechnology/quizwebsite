@@ -238,13 +238,20 @@ if(!isset($_SESSION["user_db"])  || $_SESSION["user_db"] ==""){
         // echo "<br>squl is: ",$sql;
         $result2 ="";
         $result2 = $conn2->query($sql);
-        // echo "<r><br><br>";
+        // echo "<pre>".print_r($result2)."</pre>"; 
         if($result2=="" || $result2->num_rows == 0 ){
             // echo "<br> not able to fetch the question ";
+            // $result2 = $result2->fetch_assoc();  
+            // print_r($result2);    
+            // echo "<br>squl is: ",$sql;
             die("eroor fetching data ");
+            // echo "<br><div style='block'>"; 
+            // echo "error"; 
             // echo $conn2->connect_error;
+            // echo "</div>"; 
         }  
-        $result2 = $result2->fetch_assoc();     
+        $result2 = $result2->fetch_assoc();  
+        // print_r($result2);    
         if($row["answer"] =="" ){
             $row["answer"]=" ' ' ";
         }

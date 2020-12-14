@@ -142,13 +142,13 @@ if (isset($_REQUEST["submit"])) {
       
       </div>';
 
-
+      // echo "$email"; 
 
           $data = [
             'sender_email' => $admin_email_address,
             'sender_pass' => $admin_email_pass,
-            'reciever_email' => $email,
-            'sub' => 'Reset password ',
+            'reciever_email' =>   "$email",
+            'sub' => 'Reset password  from Quiz Website',
             'body' =>    $temp
           ];
 
@@ -161,11 +161,12 @@ if (isset($_REQUEST["submit"])) {
           );
           $context  = stream_context_create($options);
           $result = file_get_contents($email_url, false, $context);
+          // echo "$result"; 
           if ($result == "ok") {
 
             $success = " Reset Password Link  is sended to your Email. Please check your Email Account.   ";
           } else {
-            $error = "Failed to Send Email. For more Information , Please Contact us at <b><u>magicmasala@gmail.com</u></b>";
+            $error = "1 st one  Failed to Send Email. For more Information , Please Contact us at <b><u>magicmasala@gmail.com</u></b>";
           }
         } else {
           if ($is_token_expire) {
