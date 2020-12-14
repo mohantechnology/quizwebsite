@@ -147,7 +147,7 @@ if (isset($_REQUEST["submit"])) {
           $data = [
             'sender_email' => $admin_email_address,
             'sender_pass' => $admin_email_pass,
-            'reciever_email' => 'mohansahualbert@gmail.com',
+            'reciever_email' => $email,
             'sub' => 'Reset password ',
             'body' =>    $temp
           ];
