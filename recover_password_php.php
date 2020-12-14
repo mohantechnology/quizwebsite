@@ -166,7 +166,12 @@ if (isset($_REQUEST["submit"])) {
 
             $success = " Reset Password Link  is sended to your Email. Please check your Email Account.   ";
           } else {
-            $error = "1 st one  Failed to Send Email. For more Information , Please Contact us at <b><u>magicmasala@gmail.com</u></b>";
+            $error = "  Failed to Send Email ,please try once  again and if this message  is shown again then  Please Contact us at <b><u>magicmasala@gmail.com</u></b>";
+            $sql = "DELETE FROM reset_pass WHERE email='$email' AND token='$token'";
+            $conn->query($sql); 
+            // echo "$sql";  
+            // print_r($result); 
+
           }
         } else {
           if ($is_token_expire) {
